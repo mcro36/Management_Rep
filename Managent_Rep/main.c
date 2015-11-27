@@ -19,15 +19,19 @@ struct cadastro_individual {
     char identf_desp4[10];
     char identf_desp5[10];
     float valor_identf[5];
-} membro;
+    
+} membro, membros_rep[10];
 
 
 int main(void) {
     
-
+    int i;
     void cadastrar_membro();
     
-    cadastrar_membro();
+    for (i = 0; i < 10; i++) {
+        membros_rep[i] = cadastrar_membro();
+    }
+    
     
     
    
