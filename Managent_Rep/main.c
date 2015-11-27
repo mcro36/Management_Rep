@@ -42,37 +42,41 @@ void cadastrar_membro(){
     printf("Digite o nome do membro:\n");
     
     fgets(membro.nome, 30, stdin);
-    printf("%s", membro.nome);
     fflush(stdin);
     
+    printf("Digite o nome das despesas individuais (maximo 5) ->\n");
+    
     fgets(membro.identf_desp1, 10, stdin);
-    printf("%s", membro.identf_desp1);
     fflush(stdin);
     
     fgets(membro.identf_desp2, 10, stdin);
-    printf("%s", membro.identf_desp2);
     fflush(stdin);
     
     fgets(membro.identf_desp3, 10, stdin);
-    printf("%s", membro.identf_desp3);
     fflush(stdin);
     
     fgets(membro.identf_desp4, 10, stdin);
-    printf("%s", membro.identf_desp4);
     fflush(stdin);
     
     fgets(membro.identf_desp5, 10, stdin);
-    printf("%s", membro.identf_desp5);
     fflush(stdin);
     
+ //   printf("%s %s %s %s %s", membro.identf_desp1, membro.identf_desp2, membro.identf_desp3, membro.identf_desp4, membro.identf_desp5);
     
-    printf("Digite o valor das despesas segindo a ordem acima ->\n");
     
-    for (i= 0; i <= 5; i++) {
-        scanf("%f", membro.valor_identf[i]);
-        printf("%s %f", membro.identf_desp1, membro.valor_identf[i]);
-        
+    printf("Digite o valor das despesas seguindo a ordem acima ->\n");
+    
+    for (i= 0; i < 5; i++) {
+        scanf("%f", &membro.valor_identf[i]);
     }
+        printf("%s %.2f  \n", membro.identf_desp1, membro.valor_identf[0]);
+        printf("%s %.2f  \n", membro.identf_desp2, membro.valor_identf[1]);
+        printf("%s %.2f  \n", membro.identf_desp3, membro.valor_identf[2]);
+        printf("%s %.2f  \n", membro.identf_desp4, membro.valor_identf[3]);
+        printf("%s %.2f  \n", membro.identf_desp5, membro.valor_identf[4]);
+
+    
+
     
 }
 
